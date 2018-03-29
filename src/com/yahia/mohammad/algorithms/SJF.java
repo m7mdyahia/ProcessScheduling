@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * @author Mohamed
  * Shortest job first scheduling
  */
-class SJF extends schedulingAlgorithmTemplate
+class SJF extends schedulingAlgorithmBase
 {
 
 	protected void setComparator() {

@@ -22,17 +22,10 @@ public class main_window {
         ProcessInstance p1 = new ProcessInstance("p1", 0, 6, 3);
         ProcessInstance p2 = new ProcessInstance("p2", 1, 6, 1);
         ProcessInstance p3 = new ProcessInstance("p3", 2, 9, 3);
-        //ProcessInstance p4 = new ProcessInstance("p4", 3, 3,4);
-        //ProcessInstance p5 = new ProcessInstance("p5", 4, 2,2);
-        LinkedList<ProcessInstance> process_list = new LinkedList<>(List.of(p1, p2, p3));
-        process_list.add(p1);
-        process_list.add(p2);
-        process_list.add(p3);
-        //process_list.add(p4);
-        //process_list.add(p5);
-        // System.out.println( process_list.toString());
+        ProcessInstance p4 = new ProcessInstance("p4", 3, 3, 4);
+        ProcessInstance p5 = new ProcessInstance("p5", 4, 2, 2);
         ProcessGroup pg = new ProcessGroup(
-                process_list,
+                new LinkedList<>(List.of(p1, p2, p3, p4, p5)),
                 new RoundRobin(3),
                 true);
         System.out.println(pg.getResult());

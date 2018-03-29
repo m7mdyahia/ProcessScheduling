@@ -6,7 +6,7 @@ import com.yahia.mohammad.SchedulingResult;
 import java.util.Collection;
 import java.util.LinkedList;
 
-public class RoundRobin extends schedulingAlgorithmTemplate
+public class RoundRobin extends schedulingAlgorithmBase
 {
 	RoundRobin()
 	{

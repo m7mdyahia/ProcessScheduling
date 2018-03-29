@@ -4,9 +4,10 @@ import com.yahia.mohammad.*;
 
 import java.util.*;
 
-abstract class schedulingAlgorithmTemplate implements SchedulingAlgorithm {
+abstract class schedulingAlgorithmBase implements SchedulingAlgorithm {
 
     Queue<ProcessInstance> ready_queue;
+    // Time quantum for scheduling
     protected int q = 1;
 
     @Override

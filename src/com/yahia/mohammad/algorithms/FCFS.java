@@ -5,7 +5,7 @@ import com.yahia.mohammad.ProcessInstance;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-class FCFS extends schedulingAlgorithmTemplate
+class FCFS extends schedulingAlgorithmBase
 {
 	@Override
 	protected void setComparator() {

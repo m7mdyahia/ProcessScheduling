@@ -1,11 +1,8 @@
 package com.yahia.mohammad.algorithms;
 
-import com.yahia.mohammad.ProcessInstance;
-
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
-class priortyschduling extends schedulingAlgorithmTemplate
+class priortyschduling extends schedulingAlgorithmBase
 {
 
 	protected void setComparator() {
