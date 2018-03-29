@@ -16,7 +16,7 @@ public class ProcessGroup {
         this.group = group;
         this.scheduler = scheduler;
         this.result = new SchedulingResult();
-        if (!group.isEmpty()) scheduler.schedule(group, result, preemptive);
+        if (!group.isEmpty()) result=scheduler.schedule(group, preemptive);
     }
 
 

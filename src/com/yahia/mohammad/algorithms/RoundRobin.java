@@ -20,15 +20,15 @@ public class RoundRobin extends schedulingAlgorithmTemplate
 		q=quantum;
 	}
 	@Override
-	protected void set_Comparator() {
-		ready_queue = new LinkedList<ProcessInstance>();
+	protected void setComparator() {
+		ready_queue = new LinkedList<>();
 		q=3;
 	}
 
 	public void schedule(Collection<ProcessInstance> group, SchedulingResult result, int quantum)
 	{
 		q=quantum;
-		super.schedule(group, result, true);
+		super.schedule(group, true);
 
 	}
 

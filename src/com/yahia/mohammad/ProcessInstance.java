@@ -116,7 +116,7 @@ public class ProcessInstance {
 	/**
 	 * @param latest_start the latest_start to set
 	 */
-	public void setLatest_start(int latest_start) {
+	public void setLatestStart(int latest_start) {
 		this.latest_start = latest_start;
 	}
 	/**

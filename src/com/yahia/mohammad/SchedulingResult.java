@@ -3,20 +3,29 @@
  */
 package com.yahia.mohammad;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 
 /**
  * @author Mohamed Yahia
  */
 public class SchedulingResult {
-
-    Collection<Schedulcell> gant_chart;
-
-    public boolean add(Schedulcell e) {
-        return gant_chart.add(e);
+    public SchedulingResult(Collection<Schedulcell> gant_chart) {
+        this.gant_chart = gant_chart;
     }
 
-    public float avg_turnaround() {
+    public SchedulingResult() {
+        gant_chart = new LinkedList<>();
+    }
+
+    private Collection<Schedulcell> gant_chart;
+
+    public void add(Schedulcell e) {
+        gant_chart.add(e);
+    }
+
+    private float avg_turnaround() {
         float avarage = 0;
 
         for (Schedulcell s : gant_chart) {
@@ -27,7 +36,7 @@ public class SchedulingResult {
         return avarage / gant_chart.size();
     }
 
-    public float avg_Waiting() {
+    private float avg_Waiting() {
         float avarage = 0;
 
         for (Schedulcell s : gant_chart) {
@@ -37,7 +46,7 @@ public class SchedulingResult {
         return avarage / gant_chart.size();
     }
 
-    public float avg_Response() {
+    private float avg_Response() {
         float avarage = 0;
 
         for (Schedulcell s : gant_chart) {
