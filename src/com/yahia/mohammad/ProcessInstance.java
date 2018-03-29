@@ -1,4 +1,4 @@
-package com.yahia.moda;
+package com.yahia.mohammad;
 /**
  * 
  */
@@ -7,9 +7,9 @@ package com.yahia.moda;
  * @author Mohamed
  *
  */
-public class Process_instance {
+public class ProcessInstance {
 
-	Process_instance(String name, int arrival, int burst, int priroty) {
+	ProcessInstance(String name, int arrival, int burst, int priroty) {
 		super();
 		this.name = name;
 		this.burst = burst;
@@ -19,7 +19,7 @@ public class Process_instance {
 		
 		preempted=true;
 	}
-	public Process_instance(String name, int arrival ,int burst) {
+	public ProcessInstance(String name, int arrival , int burst) {
 		super();
 		this.name = name;
 		this.burst = burst;
@@ -103,7 +103,7 @@ public class Process_instance {
 	 */
 	@Override
 	public String toString() {
-		return "Process_instance [name=" + name + ", burst=" + burst
+		return "ProcessInstance [name=" + name + ", burst=" + burst
 				+ ", priroty=" + priroty + ", arrival=" + arrival
 				+ ", remaining_time=" + firist_start + "]";
 	}
@@ -152,7 +152,7 @@ public class Process_instance {
 	/**
 	 * @param firist_time the firist_time to set
 	 */
-	public void setFirist_time(boolean firist_time) {
+	public void setFiristTime(boolean firist_time) {
 		this.firist_time = firist_time;
 	}
 

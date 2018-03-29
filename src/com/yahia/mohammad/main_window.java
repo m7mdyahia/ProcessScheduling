@@ -1,4 +1,6 @@
-package com.yahia.moda;
+package com.yahia.mohammad;
+
+import com.yahia.mohammad.algorithms.RoundRobin;
 
 import java.awt.EventQueue;
 
@@ -6,16 +8,10 @@ import javax.swing.JFrame;
 
 import java.awt.Toolkit;
 
-import javax.swing.JTree;
-
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.swing.JButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
 import javax.swing.JPanel;
 
 
@@ -23,21 +19,23 @@ public class main_window {
 
 
     public static void main(String[] args) {
-        Process_instance p1 = new Process_instance("p1", 0, 6, 3);
-        Process_instance p2 = new Process_instance("p2", 1, 6, 1);
-        Process_instance p3 = new Process_instance("p3", 2, 9, 3);
-        //Process_instance p4 = new Process_instance("p4", 3, 3,4);
-        //Process_instance p5 = new Process_instance("p5", 4, 2,2);
-        LinkedList<Process_instance> process_list = new LinkedList<>(List.of(p1, p2, p3));
+        ProcessInstance p1 = new ProcessInstance("p1", 0, 6, 3);
+        ProcessInstance p2 = new ProcessInstance("p2", 1, 6, 1);
+        ProcessInstance p3 = new ProcessInstance("p3", 2, 9, 3);
+        //ProcessInstance p4 = new ProcessInstance("p4", 3, 3,4);
+        //ProcessInstance p5 = new ProcessInstance("p5", 4, 2,2);
+        LinkedList<ProcessInstance> process_list = new LinkedList<>(List.of(p1, p2, p3));
         process_list.add(p1);
         process_list.add(p2);
         process_list.add(p3);
         //process_list.add(p4);
         //process_list.add(p5);
-       // System.out.println( process_list.toString());
-        Scheduling_result result = new Scheduling_result();
-        Process_group pg = new Process_group(process_list, new RoundRobin(3), result, true);
-        System.out.println(result);
+        // System.out.println( process_list.toString());
+        ProcessGroup pg = new ProcessGroup(
+                process_list,
+                new RoundRobin(3),
+                true);
+        System.out.println(pg.getResult());
     }
 
     private JFrame frmProcessSchedulingSimulator;
